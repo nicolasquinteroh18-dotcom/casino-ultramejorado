@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Suerte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        <!-- Encabezado idéntico al del computador -->
+        <header>
+            <div class="simbolos">♠️ ♥️ ♣️ ♦️</div>
+            <h1>🎰 MERCADO SUERTE 🎲</h1>
+            <p class="slogan">Tu portal de entretenimiento, azar y fortuna</p>
+        </header>
+
+        <!-- Navegación idéntica para Computadora -->
+        <nav class="menu-desktop">
+            <button onclick="mostrarSeccion('informacion')">ℹ️ Información</button>
+            <button onclick="mostrarSeccion('casino')">🎰 Casino</button>
+            <button onclick="mostrarSeccion('loteria')">🎟️ Lotería</button>
+        </nav>
+
+        <!-- Menú desplegable flotante que APARECE SOLO EN CELULAR -->
+        <div class="menu-mobile">
+            <button class="btn-menu-mobile" onclick="toggleMenuMobile()">
+                Menú <span id="flecha-mobile">▼</span>
+            </button>
+            <div id="dropdown-mobile" class="dropdown-content-mobile oculto">
+                <a href="#" onclick="seleccionarOpcionMobile('informacion')">ℹ️ Información</a>
+                <a href="#" onclick="seleccionarOpcionMobile('casino')">🎰 Casino</a>
+                <a href="#" onclick="seleccionarOpcionMobile('loteria')">🎟️ Lotería</a>
+            </div>
+        </div>
+
+        <!-- Secciones de contenido exactamente iguales -->
+        <main class="contenido-principal">
+
+            <!-- Sección: Información General -->
+            <div id="informacion" class="seccion">
+                <h2>♦️ Información General</h2>
+                <p>Somos un mercado especializado que te beneficia o te perjudica con base a la suerte.</p>
+                <p>Brindamos asesoría, soporte e infraestructura tecnológica para el sector de apuestas y juegos de azar.</p>
+                
+                <div class="contacto-box">
+                    <h3>📞 Contacto Directo</h3>
+                    <p>📧 <strong>Correo:</strong> MercadoSuerte@gmail.com</p>
+                    <p>📱 <strong>Teléfono:</strong> +57 310 700 60 64</p>
+                </div>
+            </div>
+
+            <!-- Sección: Casino -->
+            <div id="casino" class="seccion oculto">
+                <h2>🎰 Servicios de Casino</h2>
+                <p>Soluciones integrales para la operación y gestión de salas de juego:</p>
+                <ul>
+                    <li>🎰 <strong>Tragamonedas:</strong> Mantenimiento y calibración de máquinas de azar.</li>
+                    <li>🃏 <strong>Mesas de Póker y Blackjack:</strong> Equipamiento y sistemas de conteo.</li>
+                    <li>🎡 <strong>Ruletas electrónicas:</strong> Instalación y software de precisión.</li>
+                </ul>
+            </div>
+
+            <!-- Sección: Lotería -->
+            <div id="loteria" class="seccion oculto">
+                <h2>🎟️ Servicios de Lotería</h2>
+                <p>Plataformas y herramientas especializadas para agencias de sorteos:</p>
+                <ul>
+                    <li>🎫 <strong>Boletería:</strong> Emisión de tiquetes físicos y digitales.</li>
+                    <li>🔮 <strong>Verificación:</strong> Sistemas automáticos para la lectura de ganadores.</li>
+                    <li>📊 <strong>Consultoría:</strong> Asesoría para el lanzamiento de nuevos sorteos regionales.</li>
+                </ul>
+            </div>
+
+        </main>
+
+        <!-- Pie de página -->
+        <footer>
+            <p>©2026 Mercado Suerte</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

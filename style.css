@@ -1,0 +1,201 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #f1f1f1;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor {
+    background-color: #1e1e1e;
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+header h1 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin: 10px 0 5px 0;
+    letter-spacing: 1px;
+}
+
+.simbolos {
+    font-size: 1.2rem;
+    color: #e53935;
+    letter-spacing: 6px;
+}
+
+.slogan {
+    color: #aaaaaa;
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+
+.menu-desktop {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.menu-desktop button {
+    background-color: #e65100; 
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.menu-desktop button:hover {
+    background-color: #ff6d00;
+}
+
+
+.menu-mobile {
+    display: none;
+}
+
+
+.contenido-principal {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.seccion {
+    background-color: #000000;
+    border-left: 4px solid #e65100;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.seccion h2 {
+    color: #ffffff;
+    border-bottom: 1px solid #444444;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.seccion p {
+    line-height: 1.6;
+    color: #dddddd;
+    margin-bottom: 12px;
+}
+
+.seccion ul {
+    margin-left: 20px;
+    line-height: 1.8;
+    color: #dddddd;
+}
+
+.contacto-box {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed #444444;
+}
+
+.contacto-box h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.oculto {
+    display: none !important;
+}
+
+footer {
+    margin-top: 30px;
+    color: #777777;
+    font-size: 0.9rem;
+}
+
+
+
+@media (max-width: 768px) {
+    .contenedor {
+        padding: 15px;
+    }
+
+    /* 1. Ocultar la barra horizontal de botones de PC en el celular */
+    .menu-desktop {
+        display: none;
+    }
+
+    /* 2. Activar el menú desplegable arriba a la derecha */
+    .menu-mobile {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .btn-menu-mobile {
+        background-color: #e65100;
+        color: #ffffff;
+        border: none;
+        padding: 8px 14px;
+        border-radius: 6px;
+        font-size: 0.95rem;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .dropdown-content-mobile {
+        position: absolute;
+        right: 0;
+        top: 40px;
+        background-color: #2a2a2a;
+        border: 1px solid #444444;
+        border-radius: 8px;
+        width: 150px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+        z-index: 100;
+        overflow: hidden;
+    }
+
+    .dropdown-content-mobile a {
+        color: #ffffff;
+        padding: 12px 15px;
+        text-decoration: none;
+        display: block;
+        font-size: 0.95rem;
+        border-bottom: 1px solid #333333;
+    }
+
+    .dropdown-content-mobile a:hover {
+        background-color: #e65100;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .seccion {
+        padding: 18px;
+    }
+}
